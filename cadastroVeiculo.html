@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DriveX - Cadastro de Veículo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Espaçamento para o conteúdo não sumir atrás da navbar fixa */
+        body {
+            padding-top: 85px;
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,57 +25,96 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="cadastroCliente.html">Cadastrar Cliente</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastroCliente.html">Cadastrar Cliente</a></li>
                     <li class="nav-item"><a class="nav-link" href="listagemCliente.html">Lista de Clientes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cadastroVeiculo.html">Cadastrar Veículo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cadastroVeiculo.html">Cadastrar Veículo</a></li>
                     <li class="nav-item"><a class="nav-link" href="listagemVeiculo.html">Lista de Veículos</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mb-5" style="max-width: 720px;">
+    <div class="container mb-5">
         <div class="py-4 text-center">
             <h2>Cadastro de Novo Veículo</h2>
-            <p class="lead">Adicione novos automóveis à frota disponível para locação.</p>
+            <p class="lead">Adicione novos automóveis à frota disponível para locação do sistema DriveX.</p>
         </div>
 
-        <div class="card shadow-sm p-4 bg-white border">
-            <form action="listagem-veiculos.html">
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <label for="marca" class="form-label fw-semibold">Marca</label>
-                        <input type="text" class="form-control" id="marca" placeholder="Ex: Chevrolet" required>
-                    </div>
+        <div class="row g-5">
+            
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-success">Status da Frota</span>
+                    <span class="badge bg-success rounded-pill">Info</span>
+                </h4>
+                <ul class="list-group mb-3 shadow-sm">
+                    <li class="list-group-item d-flex justify-content-between lh-sm py-3">
+                        <div>
+                            <h6 class="my-0 fw-bold">Total de Veículos</h6>
+                            <small class="text-muted">Cadastrados no sistema</small>
+                        </div>
+                        <span class="badge bg-secondary align-self-center">24</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm py-3">
+                        <div>
+                            <h6 class="my-0">Disponíveis hoje</h6>
+                            <small class="text-muted">Prontos para locação</small>
+                        </div>
+                        <span class="text-success fw-bold">18</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light py-3">
+                        <div>
+                            <h6 class="my-0 text-danger">Em Manutenção</h6>
+                            <small class="text-muted">Aguardando oficina</small>
+                        </div>
+                        <span class="text-danger fw-bold">6</span>
+                    </li>
+                </ul>
 
-                    <div class="col-md-6">
-                        <label for="modelo" class="form-label fw-semibold">Modelo</label>
-                        <input type="text" class="form-control" id="modelo" placeholder="Ex: Onix Plus" required>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label for="ano" class="form-label fw-semibold">Ano</label>
-                        <input type="number" class="form-control" id="ano" placeholder="2024" required>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label for="placa" class="form-label fw-semibold">Placa</label>
-                        <input type="text" class="form-control" id="placa" placeholder="ABC1D23" required>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label for="diaria" class="form-label fw-semibold">Valor da Diária (R$)</label>
-                        <input type="number" step="0.01" class="form-control" id="diaria" placeholder="149.90" required>
-                    </div>
+                <div class="card p-3 shadow-sm bg-white text-center border">
+                    <small class="text-muted d-block mb-2">Precisa atualizar dados em lote?</small>
+                    <a href="#" class="btn btn-outline-secondary btn-sm w-100">Importar Planilha CSV</a>
                 </div>
+            </div>
 
-                <hr class="my-4">
-                <button class="w-100 btn btn-success btn-lg" type="submit">Inserir Veículo na Frota</button>
-            </form>
-        </div>
-    </div>
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Especificações do Automóvel</h4>
+                <div class="card shadow-sm p-4 bg-white border">
+                    <form action="listagemVeiculo.html">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="marca" class="form-label fw-semibold">Marca</label>
+                                <input type="text" class="form-control" id="marca" placeholder="Ex: Chevrolet" required>
+                            </div>
 
-    <footer class="container text-center mt-5 border-top pt-4">
+                            <div class="col-md-6">
+                                <label for="modelo" class="form-label fw-semibold">Modelo</label>
+                                <input type="text" class="form-control" id="modelo" placeholder="Ex: Onix Plus" required>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="ano" class="form-label fw-semibold">Ano</label>
+                                <input type="number" class="form-control" id="ano" placeholder="2024" required>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="placa" class="form-label fw-semibold">Placa</label>
+                                <input type="text" class="form-control" id="placa" placeholder="ABC1D23" required>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="diaria" class="form-label fw-semibold">Valor da Diária (R$)</label>
+                                <input type="number" step="0.01" class="form-control" id="diaria" placeholder="149.90" required>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+                        <button class="w-100 btn btn-success btn-lg" type="submit">Inserir Veículo na Frota</button>
+                    </form>
+                </div>
+            </div>
+
+        </div> </div> <footer class="container text-center mt-5 border-top pt-4">
         <p>&copy; 2026 DriveX &middot; <a href="#">Privacidade</a></p>
     </footer>
 
