@@ -7,54 +7,57 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body class="bg-light">
+<body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">🚗 DriveX</a>
+            <a class="navbar-brand fw-bold" href="index.html">🚗 DriveX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="cadastro-cliente.html">Cadastrar Cliente</a></li>
-                    <li class="nav-item"><a class="nav-link" href="listagem-clientes.html">Lista de Clientes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cadastro-veiculo.html">Cadastrar Veículo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="listagem-veiculos.html">Lista de Veículos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cadastroCliente.html">Cadastrar Cliente</a></li>
+                    <li class="nav-item"><a class="nav-link" href="listagemCliente.html">Lista de Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastroVeiculo.html">Cadastrar Veículo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="listagemVeiculo.html">Lista de Veículos</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-5 pt-4" style="max-width: 720px;">
+    <div class="container mb-5" style="max-width: 720px;">
         <div class="py-4 text-center">
             <h2>Ficha de Cadastro de Cliente</h2>
-            <p class="lead">Insira as informações do condutor abaixo para habilitar locações no sistema.</p>
+            <p class="lead">Insira as informações do condutor abaixo. Ao salvar, você será redirecionado para a listagem.</p>
         </div>
 
-        <div class="card shadow-sm p-4">
-            <form class="needs-validation" novalidate action="listagem-clientes.html">
+        <div class="card shadow-sm p-4 bg-white border">
+            <form action="listagem-clientes.html">
                 <div class="row g-3">
                     <div class="col-12">
-                        <label for="nome" class="form-label">Nome Completo</label>
-                        <input type="text" class="form-cols form-control" id="nome" placeholder="João da Silva" required>
+                        <label for="nome" class="form-label fw-semibold">Nome Completo</label>
+                        <input type="text" class="form-control" id="nome" placeholder="João da Silva" required>
                     </div>
 
                     <div class="col-md-6">
-                        <label for="cpf" class="form-label">CPF</label>
+                        <label for="cpf" class="form-label fw-semibold">CPF</label>
                         <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
                     </div>
 
                     <div class="col-md-6">
-                        <label for="telefone" class="form-label">Telefone</label>
+                        <label for="telefone" class="form-label fw-semibold">Telefone</label>
                         <input type="tel" class="form-control" id="telefone" placeholder="(11) 99999-9999" required>
                     </div>
 
                     <div class="col-12">
-                        <label for="email" class="form-label">E-mail</label>
+                        <label for="email" class="form-label fw-semibold">E-mail</label>
                         <input type="email" class="form-control" id="email" placeholder="joao@exemplo.com" required>
                     </div>
 
                     <div class="col-12">
-                        <label for="endereco" class="form-label">Endereço Completo</label>
+                        <label for="endereco" class="form-label fw-semibold">Endereço Completo</label>
                         <input type="text" class="form-control" id="endereco" placeholder="Rua das Flores, 123 - Centro" required>
                     </div>
                 </div>
@@ -68,5 +71,7 @@
     <footer class="container text-center mt-5 border-top pt-4">
         <p>&copy; 2026 DriveX &middot; <a href="#">Privacidade</a></p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

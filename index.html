@@ -9,19 +9,19 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">🚗 DriveX</a>
+            <a class="navbar-brand fw-bold" href="index.html">🚗 DriveX</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cadastro-cliente.html">Cadastrar Cliente</a></li>
-                    <li class="nav-item"><a class="nav-link" href="listagem-clientes.html">Lista de Clientes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cadastro-veiculo.html">Cadastrar Veículo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="listagem-veiculos.html">Lista de Veículos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cadastroCliente.html">Cadastrar Cliente</a></li>
+                    <li class="nav-item"><a class="nav-link" href="listagemCliente.html">Lista de Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastroVeiculo.html">Cadastrar Veículo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="listagemVeiculo.html">Lista de Veículos</a></li>
                 </ul>
             </div>
         </div>
@@ -35,22 +35,22 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" alt="Carro de luxo">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" alt="Carro na estrada">
                     <div class="container">
-                        <div class="carousel-caption text-start bg-dark bg-opacity-50 p-4 rounded">
-                            <h1>Liberdade para o seu caminho.</h1>
+                        <div class="carousel-caption text-start p-4 rounded">
+                            <h1 class="fw-bold">Liberdade para o seu caminho.</h1>
                             <p>Encontre o veículo perfeito para sua próxima viagem com o melhor preço do mercado.</p>
-                            <p><a class="btn btn-lg btn-primary" href="listagem-veiculos.html">Ver Modelos</a></p>
+                            <p><a class="btn btn-lg btn-primary px-4" href="listagem-veiculos.html">Ver Modelos</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80" alt="Interior do carro">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80" alt="Interior do automóvel">
                     <div class="container">
-                        <div class="carousel-caption bg-dark bg-opacity-50 p-4 rounded">
-                            <h1>Cadastro rápido e sem burocracia.</h1>
+                        <div class="carousel-caption p-4 rounded">
+                            <h1 class="fw-bold">Cadastro rápido e sem burocracia.</h1>
                             <p>Faça seu cadastro de cliente online em menos de 5 minutos.</p>
-                            <p><a class="btn btn-lg btn-primary" href="cadastro-cliente.html">Cadastre-se Já</a></p>
+                            <p><a class="btn btn-lg btn-success px-4" href="cadastro-cliente.html">Cadastre-se Já</a></p>
                         </div>
                     </div>
                 </div>
@@ -66,26 +66,26 @@
         </div>
 
         <div class="container marketing">
-            <div class="row text-center">
+            <div class="row text-center g-4">
                 <div class="col-lg-4">
-                    <div class="p-3 shadow-sm rounded bg-light">
-                        <h2 class="fw-normal">Econômicos</h2>
+                    <div class="p-4 shadow-sm rounded bg-white h-100 border">
+                        <h3 class="fw-normal text-primary">Econômicos</h3>
                         <p>Modelos compactos ideais para o dia a dia na cidade. Consumo inteligente e facilidade para estacionar.</p>
-                        <p><a class="btn btn-secondary" href="listagem-veiculos.html">Detalhes &raquo;</a></p>
+                        <p><a class="btn btn-secondary btn-sm" href="listagem-veiculos.html">Ver frota &raquo;</a></p>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="p-3 shadow-sm rounded bg-light">
-                        <h2 class="fw-normal">SUVs & Família</h2>
+                    <div class="p-4 shadow-sm rounded bg-white h-100 border">
+                        <h3 class="fw-normal text-success">SUVs & Família</h3>
                         <p>Espaço extra, conforto e segurança para viagens longas com toda a família. Desempenho em qualquer terreno.</p>
-                        <p><a class="btn btn-secondary" href="listagem-veiculos.html">Detalhes &raquo;</a></p>
+                        <p><a class="btn btn-secondary btn-sm" href="listagem-veiculos.html">Ver frota &raquo;</a></p>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="p-3 shadow-sm rounded bg-light">
-                        <h2 class="fw-normal">Premium</h2>
+                    <div class="p-4 shadow-sm rounded bg-white h-100 border">
+                        <h3 class="fw-normal text-danger">Premium</h3>
                         <p>Experimente o máximo do conforto, tecnologia de ponta e design sofisticado para ocasiões especiais.</p>
-                        <p><a class="btn btn-secondary" href="listagem-veiculos.html">Detalhes &raquo;</a></p>
+                        <p><a class="btn btn-secondary btn-sm" href="listagem-veiculos.html">Ver frota &raquo;</a></p>
                     </div>
                 </div>
             </div>
